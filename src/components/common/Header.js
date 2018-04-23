@@ -1,18 +1,17 @@
-// Import libraries for making a registerComponent
-
+// Import libraries for making a component
 import React from 'react';
-import { Text,View } from 'react-native';
+import { Text, View } from 'react-native';
 
-//make Component
+// Make a component
+const Header = (props) => {
+  const { textStyle, viewStyle } = styles;
 
-const Header = (prop) =>{
-  const { textStyle,viewStyle} = styles;
-  return(
+  return (
     <View style={viewStyle}>
-      <Text style={textStyle}>{prop.headerText}</Text>
-    </View>);
+      <Text style={textStyle}>{props.headerText}</Text>
+    </View>
+  );
 };
-
 
 const styles = {
   viewStyle: {
@@ -32,5 +31,5 @@ const styles = {
   }
 };
 
-//make available for other part
-export {Header};
+// Make the component available to other parts of the app
+export { Header };
